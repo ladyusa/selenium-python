@@ -20,7 +20,7 @@ class Example2GoogleSearchTest(unittest.TestCase):
         search_button.click()
 
         search_box = driver.find_element(by=By.NAME, value="q")
-        assert search_box.get_attribute("value") == "Selenium"
+        self.assertEqual("Selenium", search_box.get_attribute("value"))
 
         driver.quit()
 
