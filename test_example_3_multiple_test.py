@@ -19,11 +19,11 @@ class Example3MultipleGoogleTest(unittest.TestCase):
         search_box = self.driver.find_element(by=By.NAME, value="q")
         search_button = self.driver.find_element(by=By.NAME, value="btnK")
 
-        search_box.send_keys("Selenium")
+        search_box.send_keys("Kasetsart")
         search_button.click()
 
         search_box = self.driver.find_element(by=By.NAME, value="q")
-        self.assertEqual("Selenium", search_box.get_attribute("value"))
+        self.assertEqual("Kasetsart", search_box.get_attribute("value"))
 
     def tearDown(self):
         self.driver.quit()

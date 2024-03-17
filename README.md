@@ -11,3 +11,9 @@ To install web drivers,
 To run, 
 
     $ python -m unittest filename.py
+
+
+If already have selenium and web drivers installed, 
+    
+    $ pip install selenium --upgrade
+    $ pip install webdriver-manager --upgrade

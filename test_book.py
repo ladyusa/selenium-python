@@ -12,13 +12,13 @@ class BookTest(unittest.TestCase):
         self.driver.implicitly_wait(0.5)  
 
     def test_book_heading(self):
-        self.driver.get("http://localhost:8080/")
+        self.driver.get("http://localhost:8090/")
 
         heading = self.driver.find_element(by=By.TAG_NAME, value="h1")
         self.assertEqual("Welcome to Wisdom Book Website", heading.text)
     
     def test_add_book(self):
-        self.driver.get("http://localhost:8080/book/add");
+        self.driver.get("http://localhost:8090/book/add");
 
         name_field = self.driver.find_element(by=By.ID, value="nameInput")
         author_field = self.driver.find_element(by=By.ID, value="authorInput")
