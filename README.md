@@ -1,4 +1,4 @@
-# Example : Test using Selenium using Behave
+# Example : Test using Selenium 
 
 To install Selenium, 
 

@@ -1,14 +1,11 @@
 import unittest
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
 class Example2GoogleSearchTest(unittest.TestCase):
 
     def test_search_google(self):
-        service = ChromeService(executable_path=ChromeDriverManager().install())
-        driver = webdriver.Chrome(service=service)
+        driver = webdriver.Chrome()
 
         driver.get("https://google.co.th")
         driver.implicitly_wait(0.5)

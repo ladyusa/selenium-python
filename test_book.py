@@ -1,14 +1,11 @@
 import unittest
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
 class BookTest(unittest.TestCase):
 
     def setUp(self):
-        self.service = ChromeService(executable_path=ChromeDriverManager().install())
-        self.driver = webdriver.Chrome(service=self.service)
+        self.driver = webdriver.Chrome() 
         self.driver.implicitly_wait(0.5)  
 
     def test_book_heading(self):
